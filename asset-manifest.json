@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/macula/static/css/main.d646de71.css",
+    "main.js": "/macula/static/js/main.132e0588.js",
+    "static/js/787.b21d2400.chunk.js": "/macula/static/js/787.b21d2400.chunk.js",
+    "index.html": "/macula/index.html",
+    "main.d646de71.css.map": "/macula/static/css/main.d646de71.css.map",
+    "main.132e0588.js.map": "/macula/static/js/main.132e0588.js.map",
+    "787.b21d2400.chunk.js.map": "/macula/static/js/787.b21d2400.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d646de71.css",
+    "static/js/main.132e0588.js"
+  ]
+}
