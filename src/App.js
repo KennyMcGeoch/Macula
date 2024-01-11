@@ -1,4 +1,5 @@
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
   const canvasStyle = {
@@ -6,6 +7,15 @@ function App() {
     padding:0,
     margin:"40px"
   }
+
+  useEffect(() => {
+      changeBlue();
+      changeGreen();
+      changeRed();
+  }, []); // Pass an empty array to only call the function once on mount.
+  
+ 
+
 
   function changeBlue(){
     const elem = document.getElementById("blueOne")
@@ -99,6 +109,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <p>Vision Test</p>
       <hr/>
       <p>Blue Cone Test</p>
