@@ -117,13 +117,13 @@ function App() {
       <p/>
       <div className="can">
   
-        Yellow/White: <canvas id="blueA" width="200" height="100" style={canvasStyle}></canvas>     
+        <div className="can">Yellow/White: <canvas id="blueA" width="200" height="100" style={canvasStyle}></canvas></div>     
 
-        Red/Purple:  <canvas id="blueB" width="200" height="100" style={canvasStyle}></canvas> 
+        <div className="can">Red/Purple:  <canvas id="blueB" width="200" height="100" style={canvasStyle}></canvas></div> 
 
-        Green/Cyan:  <canvas id="blueC" width="200" height="100" style={canvasStyle}></canvas> 
+        <div className="can">Green/Cyan:  <canvas id="blueC" width="200" height="100" style={canvasStyle}></canvas></div> 
 
-        Black/Blue:  <canvas id="blueD" width="200" height="100" style={canvasStyle}></canvas> 
+        <div className="can">Black/Blue:  <canvas id="blueD" width="200" height="100" style={canvasStyle}></canvas></div> 
 
 </div>
 <hr/>
