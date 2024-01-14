@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/macula/static/css/main.764ccea8.css",
-    "main.js": "/macula/static/js/main.775708eb.js",
+    "main.css": "/macula/static/css/main.877cbbd7.css",
+    "main.js": "/macula/static/js/main.03233870.js",
     "static/js/787.b21d2400.chunk.js": "/macula/static/js/787.b21d2400.chunk.js",
     "index.html": "/macula/index.html",
-    "main.764ccea8.css.map": "/macula/static/css/main.764ccea8.css.map",
-    "main.775708eb.js.map": "/macula/static/js/main.775708eb.js.map",
+    "main.877cbbd7.css.map": "/macula/static/css/main.877cbbd7.css.map",
+    "main.03233870.js.map": "/macula/static/js/main.03233870.js.map",
     "787.b21d2400.chunk.js.map": "/macula/static/js/787.b21d2400.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.764ccea8.css",
-    "static/js/main.775708eb.js"
+    "static/css/main.877cbbd7.css",
+    "static/js/main.03233870.js"
   ]
 }
