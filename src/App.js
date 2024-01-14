@@ -12,99 +12,66 @@ function App() {
       changeBlue();
       changeGreen();
       changeRed();
+      // eslint-disable-next-line
   }, []); // Pass an empty array to only call the function once on mount.
   
- 
+  function canvasFill(id, col){
+    let canv = document.getElementById(id);
+    canv = canv.getContext("2d");
+    canv.rect(0, 0, 200, 100);
+    canv.fillStyle = col;
+    canv.fill();
+    return
+  }
 
 
   function changeBlue(){
     const elem = document.getElementById("blueOne")
+    const perc = document.getElementById("blueOnePerc")
     if (elem === null)return console.log("null")
     let val = elem.value
+    perc.innerText = Math.floor(val/2.55) + "%"
     let colourA = `rgb(255,255,${val})`
     let colourB = `rgb(255,0,${val})`
     let colourC = `rgb(0,255,${val})`
     let colourD = `rgb(0,0,${val})`
-    let blueA = document.getElementById("blueA");
-    blueA = blueA.getContext("2d");
-    blueA.rect(0, 0, 200, 100);
-    blueA.fillStyle = colourA;
-    blueA.fill();
-    let blueB = document.getElementById("blueB");
-    blueB = blueB.getContext("2d");
-    blueB.rect(0, 0, 200, 100);
-    blueB.fillStyle = colourB;
-    blueB.fill();
-    let blueC = document.getElementById("blueC");
-    blueC = blueC.getContext("2d");
-    blueC.rect(0, 0, 200, 100);
-    blueC.fillStyle = colourC;
-    blueC.fill();
-    let blueD = document.getElementById("blueD");
-    blueD = blueD.getContext("2d");
-    blueD.rect(0, 0, 200, 100);
-    blueD.fillStyle = colourD;
-    blueD.fill();
+    canvasFill("blueA", colourA)
+    canvasFill("blueB", colourB)
+    canvasFill("blueC", colourC)
+    canvasFill("blueD", colourD)
+    
   }
 
   function changeGreen(){
     const elem = document.getElementById("greenOne")
+    const perc = document.getElementById("greenOnePerc")
     if (elem === null)return console.log("null")
     let val = elem.value
+    perc.innerText = Math.floor(val/2.55) + "%"
     let colourA = `rgb(255,${val},255)`
     let colourB = `rgb(255,${val},0)`
     let colourC = `rgb(0,${val},255)`
     let colourD = `rgb(0,${val},0)`
-    let greenA = document.getElementById("greenA");
-    greenA = greenA.getContext("2d");
-    greenA.rect(0, 0, 200, 100);
-    greenA.fillStyle = colourA;
-    greenA.fill();
-    let greenB = document.getElementById("greenB");
-    greenB = greenB.getContext("2d");
-    greenB.rect(0, 0, 200, 100);
-    greenB.fillStyle = colourB;
-    greenB.fill();
-    let greenC = document.getElementById("greenC");
-    greenC = greenC.getContext("2d");
-    greenC.rect(0, 0, 200, 100);
-    greenC.fillStyle = colourC;
-    greenC.fill();
-    let greenD = document.getElementById("greenD");
-    greenD = greenD.getContext("2d");
-    greenD.rect(0, 0, 200, 100);
-    greenD.fillStyle = colourD;
-    greenD.fill();
+    canvasFill("greenA", colourA)
+    canvasFill("greenB", colourB)
+    canvasFill("greenC", colourC)
+    canvasFill("greenD", colourD)
   }
 
   function changeRed(){
     const elem = document.getElementById("redOne")
+    const perc = document.getElementById("redOnePerc")
     if (elem === null)return console.log("null")
     let val = elem.value
+    perc.innerText = Math.floor(val/2.55) + "%"
     let colourA = `rgb(${val},255,255)`
     let colourB = `rgb(${val},0,255)`
     let colourC = `rgb(${val},255,0`
     let colourD = `rgb(${val},0,0)`
-    let redA = document.getElementById("redA");
-    redA = redA.getContext("2d");
-    redA.rect(0, 0, 200, 100);
-    redA.fillStyle = colourA;
-    redA.fill();
-    let redB = document.getElementById("redB");
-    redB = redB.getContext("2d");
-    redB.rect(0, 0, 200, 100);
-    redB.fillStyle = colourB;
-    redB.fill();
-    let redC = document.getElementById("redC");
-    redC = redC.getContext("2d");
-    redC.rect(0, 0, 200, 100);
-    redC.fillStyle = colourC;
-    redC.fill();
-    let redD = document.getElementById("redD");
-    redD = redD.getContext("2d");
-    redD.rect(0, 0, 200, 100);
-    redD.fillStyle = colourD;
-    redD.fill();
+    canvasFill("redA", colourA)
+    canvasFill("redB", colourB)
+    canvasFill("redC", colourC)
+    canvasFill("redD", colourD)
   }
 
   return (
@@ -113,7 +80,10 @@ function App() {
       <p>Vision Test</p>
       <hr/>
       <p>Blue Cone Test</p>
+      <div className='range'>
       <input id="blueOne" type="range" min="0" max="255" onChange={changeBlue}/>
+      <label id="blueOnePerc"/>
+      </div>
       <p/>
       <div className="can">
   
@@ -130,7 +100,10 @@ function App() {
 
       
       <p>Green Cone Test</p>
+      <div className='range'>
       <input id="greenOne" type="range" min="0" max="255" onChange={changeGreen}/>
+      <label id="greenOnePerc"/>
+      </div>
       <p/>
       <div className='can'>
 
@@ -144,7 +117,10 @@ function App() {
       </div>
       <hr/>
       <p>Red Cone Test</p>
+      <div className='range'>
       <input id="redOne" type="range" min="0" max="255" onChange={changeRed}/>
+      <label id="redOnePerc"/>
+      </div>
       <p/>
       <div className='can'>
 
